@@ -1,0 +1,146 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.gradient-layer {
+  background: -moz-linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(142,142,142,1) 100%);
+  background: -webkit-linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(142,142,142,1) 100%);
+  background: -o-linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(142,142,142,1) 100%);
+  background: -ms-linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(142,142,142,1) 100%);
+  background: linear-gradient(330deg, rgba(255,255,255,1) 0%, rgba(142,142,142,1) 100%);
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+.or-container {
+  text-align: center;
+  border-bottom: 1px solid #D5D5D5;
+  line-height: 0.1em !important;
+  margin: 15px 0 10px 0 !important;
+}
+
+.or {
+  color: rgb(170, 169, 169);
+  background: #424242;
+  padding: 10px !important;
+}
+
+.link-like:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+#adaptable-homepage-top {
+  height: 325px;
+}
+
+@media only screen and (max-width: 960px) {
+  #desktop-header {
+    display: none;
+  }
+  #mobile-header {
+    display: flex;
+  }
+  #adaptable-homepage-top {
+    height: 0;
+  }
+  .homepage-top-inner {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  #desktop-header {
+    display: flex;
+  }
+  #mobile-header {
+    display: none;
+  }
+}
+
+.homepage-top-open {
+  width: 100%;
+  overflow: hidden;
+  transition: width 0.7s ease-in-out;
+}
+
+.homepage-top-open:hover, .homepage-top-reduce:hover {
+  cursor: pointer;
+}
+
+.homepage-top-reduce {
+  width: 40px;
+  overflow: hidden;
+  transition: width 0.7s ease-in-out;
+}
+
+.homepage-top-arrow {
+  top: 50%;
+  opacity: 1;
+  transition: opacity 0.35s 0.35s linear !important;
+}
+
+.homepage-top-scale-img {
+  height: 70%;
+  top: 6%;
+  transition: height 0.4s linear, top 0.4s linear, opacity 0.35s linear;
+}
+
+.homepage-top-scale {
+  top: 80%;
+  transform: scale(1);
+  transition: transform 0.4s linear, top 0.4s linear, opacity 0.35s linear;
+}
+
+.homepage-top-open .homepage-top-scale-img,.homepage-top-open .homepage-top-scale {
+  opacity: 1;
+  transition: height 0.4s linear, top 0.4s linear, opacity 0.35s 0.35s linear, transform 0.4s linear;
+}
+
+.homepage-top-open .homepage-top-arrow {
+  opacity: 0;
+  transition: opacity 0.35s linear;
+}
+
+.homepage-top-reduce .homepage-top-scale-img,.homepage-top-reduce .homepage-top-scale {
+  opacity: 0;
+}
+
+.homepage-top-open:hover .homepage-top-scale {
+  top: 82.5%;
+  transform: scale(1.15);
+}
+
+.homepage-top-open:hover .homepage-top-scale-img {
+  height: 75%;
+  top: 3.5%;
+}
+
+.axis {
+  stroke-width: 2;
+}
+
+.line {
+  fill: none;
+}
+
+.indicator-circle {
+  fill: #fff;
+}
+
+.indicator-text {
+  fill: #fff;
+}
+
+.indicator-line {
+  fill: none;
+  stroke: #d6d6d6;
+  stroke-width: 3;
+}
+
+.text {
+  fill: #fff;
+}
