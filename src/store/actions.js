@@ -163,7 +163,7 @@ const loginError = (code, message) => {
 }
 
 export const signUp = (email, displayName, password) => {
-  return (dispatch, getState, { getFirebase }) => {
+  return (dispatch, _, { getFirebase }) => {
     const firebase = getFirebase();
     dispatch(setSignupOrLoginPending(true));
     firebase.createUser({ email, password }, { email, displayName }).then(res => {
@@ -191,7 +191,7 @@ export const login = (email, password) => {
 }
 
 export const socialMediaLogin = provider => {
-  return (dispatch, getState, { getFirebase }) => {
+  return (dispatch, _, { getFirebase }) => {
     const firebase = getFirebase();
     dispatch(setSocialMediaSignupOrLoginPending(true));
     firebase.login({ provider, type: 'popup' }).then(res => {
@@ -206,7 +206,7 @@ export const socialMediaLogin = provider => {
 }
 
 export const postComment = (articleId, comment) => {
-  return (dispatch, getState, { getFirestore }) => {
+  return (_, getState, { getFirestore }) => {
     const firestore = getFirestore();
     const profile = getState().firebase.profile;
     const auth = getState().firebase.auth;

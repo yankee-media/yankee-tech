@@ -6,8 +6,7 @@ const serviceAccount = require('./service-account.json');
 admin.initializeApp({
   credential: admin
     .credential
-    .cert(serviceAccount),
-  databaseURL: process.env.FIREBASE_DB
+    .cert(serviceAccount)
 });
 const firestore = admin.firestore();
 
