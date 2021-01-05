@@ -4,7 +4,7 @@ export const BACKGROUND_COLOR = '#1e1e1e';
 export const SECONDARY_BACKGROUND_COLOR = '#4f4f4f';
 export const MATERIAL_RED = '#f44336';
 
-export const MAIN_LOGO = 'https://firebasestorage.googleapis.com/v0/b/yankee-tech.appspot.com/o/minified_main_logo.png?alt=media&token=e1ecab76-3b8e-47e4-a559-3ffbb5d9e091';
+export const MAIN_LOGO = 'https://firebasestorage.googleapis.com/v0/b/yankee-tech-app.appspot.com/o/FullLogo.png?alt=media&token=66cc68a8-b242-44bf-b063-0bd4e48516ad';
 export const GOOGLE_ICON = 'https://firebasestorage.googleapis.com/v0/b/yankee-tech.appspot.com/o/google_icon.png?alt=media&token=a6fc0dcb-ec56-47db-b9de-d05bc410ec24';
 export const DEFAULT_AVATAR_URL = 'https://firebasestorage.googleapis.com/v0/b/yankee-tech.appspot.com/o/default_avatar.png?alt=media&token=ee288c78-64a2-42f0-ba09-3fccc0561baa';
 
