@@ -14,7 +14,7 @@ const { articlesIndex, db, FieldValue } = require('../creds');
 const { getDisplayDateTimeNow, getUnixDateTimeNow } = require('./util/date_time');
 const firebase_tools = require('firebase-tools');
 
-exports.handleNewArticle = (snapshot, context) => {
+exports.handleNewArticle = (snapshot, _) => {
 
   if (!snapshot.exists) {
     console.error('non-existent article processed by onArticleAdded');
@@ -72,11 +72,11 @@ exports.handleNewArticle = (snapshot, context) => {
   }).catch(error => {
     console.error('article add failed.');
     console.error(error);
-    return Promise.reject('FAILED');
+    return Promise.reject(new Error('FAILED'));
   });
 }
 
-exports.handleArticleMetaUpdate = (snapshot, context) => {
+exports.handleArticleMetaUpdate = (snapshot, _) => {
 
   if (!snapshot.before.exists || !snapshot.after.exists) {
     console.error('non-existent article processed by onArticleMetaUpdate');
@@ -104,18 +104,18 @@ exports.handleArticleMetaUpdate = (snapshot, context) => {
   }).catch(error => {
     console.error('article meta update failed.');
     console.error(error);
-    return Promise.reject('FAILED');
+    return Promise.reject(new Error('FAILED'));
   });
 }
 
-exports.handleArticleContentsUpdate = (snapshot, context) => {
+exports.handleArticleContentsUpdate = (snapshot, _) => {
   if (!snapshot.exists) {
     console.error('non-existent article processed by onArticleContentsUpdate');
-    return null
+    return false;
   }
 }
 
-exports.handleArticleDelete = (snapshot, context) => {
+exports.handleArticleDelete = (snapshot, _) => {
   
   if (!snapshot.exists) {
     console.error('non-existent article processed by onArticleDelete');
@@ -144,7 +144,7 @@ exports.handleArticleDelete = (snapshot, context) => {
   }).catch(error => {
     console.error('article delete failed.');
     console.error(error);
-    return Promise.reject('FAILED');
+    return Promise.reject(new Error('FAILED'));
   });
 }
 

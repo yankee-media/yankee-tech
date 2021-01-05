@@ -35,7 +35,7 @@ exports.handleNewUserCreation = async (snapshot, context) => {
   } catch(error) {
     console.error(`user ${uid} add failed.`);
     console.error(error);
-    return Promise.reject('FAILED');
+    return Promise.reject(new Error('FAILED'));
   }
 }
 
@@ -58,6 +58,6 @@ exports.handleUserUpdate = (snapshot, context) => {
   }).catch(error => {
     console.error(`user ${uid} update failed.`);
     console.error(error);
-    return Promise.reject('FAILED');
+    return Promise.reject(new Error('FAILED'));
   });
 }
