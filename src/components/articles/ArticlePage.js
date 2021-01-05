@@ -17,7 +17,7 @@ import { withFirebase, isEmpty, isLoaded } from 'react-redux-firebase';
 import { postComment, toggleDialog } from '../../store/actions';
 
 // Util
-import ArticleParser from 'yankee-blog';
+import ArticleParser from 'yankee-article-parser';
 import { COMMENT_ID } from '../../util/constants';
 
 const ArticlePage = ({ content, meta, comments, match, auth, postComment, openDialog, commentCount }) => {
